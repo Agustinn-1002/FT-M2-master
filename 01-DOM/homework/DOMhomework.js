@@ -57,15 +57,21 @@ ToDo.prototype.completeToDo = function () {
 function buildToDo(todo, index) {
   // Tu código acá:
   let toDoShell = document.createElement('div');
-  toDoShell.className = 'toDoShell';
+
+  toDoShell.setAttribute('class', 'toDoShell');
 
   let toDoText = document.createElement('span');
-  toDoText.innerHTML = todo
-  toDoText.id = index;
+
+  toDoText.innerHTML = todo.description;
+
+  toDoText.setAttribute('id', index);
 
   if (todo.complete) {
-    toDoText.className = 'completeText'
+    toDoText.setAttribute('class', 'completeText');
   }
+
+  toDoText.addEventListener('click', completeToDo)
+
 
   toDoShell.appendChild(toDoText);
 
@@ -81,7 +87,7 @@ function buildToDos(toDos) {
   // Tu código acá:
   let newArray = toDos.map(function (value, i){
   	return buildToDo(value, i)
-  })
+  });
   return newArray
 }
 
@@ -98,13 +104,14 @@ function buildToDos(toDos) {
 function displayToDos() {
   // Tu código acá:
   let toDoContainer = document.getElementById('toDoContainer');
+
   toDoContainer.innerHTML = '';
   
   let arr = buildToDos(toDoItems)
 
-  for (let i = 0; i < arr.length; i++) {
-    toDoContainer.appendChild(arr[i]);
-  }
+  arr.map(function(element){
+    toDoContainer.append(element)
+  })
   
 }
 
@@ -119,10 +126,16 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
-  let toDoInput = document.getElementById('toDoInput');
+  //1
+  let toDoInput = document.getElementById('toDoInput').value;
+  //2
   let newtodo = new ToDo(toDoInput)
+
   toDoItems.push(newtodo);
-  toDoInput.innerHTML = "adas";
+  //3
+  document.getElementById('toDoInput').value = '';
+  //toDoInput = "";
+  //4
   displayToDos()
 }
 
@@ -132,10 +145,12 @@ function addToDo() {
 //   2) Agregarle un 'click' event listener, pasándole la función 'addToDo' como callback
 
 // Tu código acá:
-let button  = document.getElementById('addButton');
+document.getElementById('addButton').addEventListener('click', addToDo)
+
+/* let button  = document.getElementById('addButton');
 button.onclick = function () {
   addToDo()
-}
+} */
 
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
@@ -154,8 +169,10 @@ function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
   const index = event.target.id;
   // Tu código acá:
+  //1
+  toDoItems[index].completeToDo()
+  //2
   displayToDos()
-
 }
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
