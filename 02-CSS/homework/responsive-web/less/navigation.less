@@ -1,1 +1,30 @@
 // Código de Nav acá
+@import "variables.less";
+
+/*
+@nav-bg
+@nav-font
+@nav-border
+*/
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:@nav-bg;
+    padding: 20px 0 5px;
+    margin-bottom: 5px;
+    h1{
+        font-size: 3.2rem;
+        padding-bottom: 10px;
+    }
+    div{
+        padding: 5px;
+        a{
+            text-decoration: none;
+            color:@nav-font;
+            font-size: 1.6rem;
+            margin: 0 10px;
+        }
+    }
+}
