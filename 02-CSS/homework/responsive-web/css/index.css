@@ -178,22 +178,22 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 15px;
   background-color: #F6F6F6;
-  padding: 20px 0 5px;
-  margin-bottom: 5px;
-}
-nav h1 {
-  font-size: 3.2rem;
-  padding-bottom: 10px;
 }
 nav div {
-  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  width: 40%;
 }
 nav div a {
   text-decoration: none;
   color: #454A59;
-  font-size: 1.6rem;
-  margin: 0 10px;
+  font-size: 15px;
 }
 footer {
   color: #22283B;
@@ -205,14 +205,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.home img {
-  border-radius: 20px;
-}
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
 }
 .home .music-images {
   display: flex;
@@ -250,6 +252,21 @@ footer {
 .home .actual .actual-text p {
   margin-bottom: 26px;
 }
+.home .actual .actual-text .btn {
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #22283A;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: white;
+  color: #22283A;
+}
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
@@ -258,4 +275,30 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media ((max-width: 500px)) {
+  nav div {
+    width: 100%;
+  }
+  .home .intro img {
+    width: 100%;
+  }
+  .home .music-images img {
+    width: 100%;
+  }
+  .home .music-images .tecnologia {
+    display: none;
+  }
+  .home .music-images .ondas {
+    display: none;
+  }
+  .home .actual {
+    margin-top: 0px;
+    width: 100%;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .home .actual .actual-text {
+    width: 100%;
+  }
 }

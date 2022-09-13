@@ -1,6 +1,4 @@
 // Código de Nav acá
-@import "variables.less";
-
 /*
 @nav-bg
 @nav-font
@@ -8,23 +6,17 @@
 */
 
 nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .flex(column , center , center);
+    padding: 15px;
     background-color:@nav-bg;
-    padding: 20px 0 5px;
-    margin-bottom: 5px;
-    h1{
-        font-size: 3.2rem;
-        padding-bottom: 10px;
-    }
     div{
-        padding: 5px;
+        .flex(row , space-around , center);
+        padding-top: 10px;
+        width: 40%;
         a{
             text-decoration: none;
             color:@nav-font;
-            font-size: 1.6rem;
-            margin: 0 10px;
+            font-size: 15px;
         }
     }
 }
