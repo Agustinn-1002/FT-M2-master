@@ -90,8 +90,13 @@
   }
   .home {
     .intro { 
-      img{
+      div{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        img{
+          width: 98%;
+        }
       }
     }
     .music-images{
@@ -106,14 +111,21 @@
       }
     }
     .actual {
-      margin-top: 0px;
+      display: flex;
       width: 100%;
-      padding: 0;
+      padding: 15px 5px;
       flex-direction: column-reverse;
       .actual-text{
         width: 100%;
+        .btn {
+          .btn(white,@btn-bg-color,8px);
+          width: 100%;
+          text-align: center;
+        }
       }
       .actual-img {
+        margin-left: 0;
+        width: 100%;
       }
     }
   }

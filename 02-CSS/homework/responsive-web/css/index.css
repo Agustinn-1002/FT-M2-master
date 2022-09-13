@@ -254,7 +254,7 @@ footer {
 }
 .home .actual .actual-text .btn {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: lighter;
   background-color: #22283A;
   color: white;
   border-radius: 8px;
@@ -280,8 +280,13 @@ footer {
   nav div {
     width: 100%;
   }
-  .home .intro img {
+  .home .intro div {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home .intro div img {
+    width: 98%;
   }
   .home .music-images img {
     width: 100%;
@@ -293,12 +298,33 @@ footer {
     display: none;
   }
   .home .actual {
-    margin-top: 0px;
+    display: flex;
     width: 100%;
-    padding: 0;
+    padding: 15px 5px;
     flex-direction: column-reverse;
   }
   .home .actual .actual-text {
+    width: 100%;
+  }
+  .home .actual .actual-text .btn {
+    font-size: 20px;
+    font-weight: lighter;
+    background-color: #22283A;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  .home .actual .actual-text .btn:hover {
+    background-color: white;
+    color: #22283A;
+  }
+  .home .actual .actual-img {
+    margin-left: 0;
     width: 100%;
   }
 }
