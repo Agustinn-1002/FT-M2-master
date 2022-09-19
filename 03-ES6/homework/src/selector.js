@@ -9,7 +9,15 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+  if (matchFunc(startEl)){
+    resultSet.push(startEl);
+  }
+
+  for(let key of startEl.children){
+    let result = traverseDomAndCollectElements(matchFunc, key)
+    resultSet = [...resultSet, ...result];
+  }
+  return resultSet;
 };
 
 // Detecta y devuelve el tipo de selector
