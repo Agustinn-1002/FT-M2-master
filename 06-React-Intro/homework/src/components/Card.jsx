@@ -1,14 +1,13 @@
 import React from 'react';
-import '../styles/styleCard.css';
 
 export default function Card({name, img , max , min , onClose}) {
   // acá va tu código
   return (
-    <div className='contain'>
-      <button className='boton' onClick={() => onClose()}>X</button>
+    <div>
+      <button onClick={() => onClose()}>X</button>
       <p>{name}</p>
-      <div className='caracteristicas'>
-        <div className='temperaturas'>
+      <div>
+        <div>
           <ul>
             <li>Min</li>
             <li>{min}</li>
