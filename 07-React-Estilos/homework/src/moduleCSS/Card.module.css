@@ -1,0 +1,53 @@
+ul{
+    list-style: none;
+}
+
+img{
+    margin-top: -50px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    width: 250px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 30px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.boton{
+    cursor: pointer;
+    outline:none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    color: #fff;
+    background-color: rgb(197, 52, 52);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.caracteristicas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperaturas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
