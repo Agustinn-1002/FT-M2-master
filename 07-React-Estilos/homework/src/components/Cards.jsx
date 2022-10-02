@@ -7,7 +7,7 @@ const stylesDiv = {
   justifyContent: 'center',
 }
 
-export default function Cards({cities}) {
+const Cards = ({cities}) => {
   // acá va tu código
   // tip, podés usar un map
   return (
@@ -28,3 +28,5 @@ export default function Cards({cities}) {
     </div>
   )
 };
+
+export default Cards;

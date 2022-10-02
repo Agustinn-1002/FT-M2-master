@@ -1,9 +1,9 @@
 import React from 'react';
 import './Cards.css';
-
 import Card from './Card.jsx';
 
 export default function Cards({cities, onClose}) {
+  console.log(cities)
   if(cities){
     return (
       <div className='cards'>

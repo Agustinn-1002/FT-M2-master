@@ -1,6 +1,8 @@
 .card {
   margin: 20px;
   width: 18rem;
+  background-color: rgb(124, 124, 124);
+  color: #fff;
 }
 
 .card-title {

@@ -1,14 +1,14 @@
 import React from 'react';
-import css from '../moduleCSS/Card.module.css'
+import {contain, boton, caracteristicas,temperaturas} from '../moduleCSS/Card.module.css'
 
-export default function Card({name, img , max , min , onClose}) {
+const Card = ({name, img , max , min , onClose}) => {
   // acá va tu código
   return (
-    <div className={css.contain}>
-      <button className={css.boton} onClick={() => onClose()}>X</button>
+    <div className={contain}>
+      <button className={`${boton} btn btn-danger`} onClick={() => onClose()}>X</button>
       <p>{name}</p>
-      <div className={css.caracteristicas}>
-        <div className={css.temperaturas}>
+      <div className={caracteristicas}>
+        <div className={temperaturas}>
           <ul>
             <li>Min</li>
             <li>{min}</li>
@@ -18,8 +18,10 @@ export default function Card({name, img , max , min , onClose}) {
             <li>{max}</li>
           </ul>
         </div>
-        <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="" />
+        <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="temperatura" />
       </div>
     </div>
   )
 };
+
+export default Card;
