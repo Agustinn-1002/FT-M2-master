@@ -51,7 +51,7 @@ export default function Form(props) {
             />
           {errors.password && (<p className='danger'>{errors.password}</p>)}
         </div>
-          <input type="submit" />
+          <input type="submit" disabled={Object.keys(errors).length !== 0 || !input.password || !input.username}/>
       </form>
   )
 }
