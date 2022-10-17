@@ -18,10 +18,10 @@ class Counter extends Component {
         return (
             <p>
                 Clickeado: {this.props.count} veces
-                <button onClick={() => {/* Completar */ }}>
+                <button onClick={this.props.increment}>
                     + {/* Incremeta */}
                 </button>
-                <button onClick={() => {/* Completar */ }}>
+                <button onClick={this.props.decrement}>
                     -  {/* Decrementa */}
                 </button>
                  {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
@@ -49,6 +49,6 @@ const mapStateToProps = (state) => {
 
 // Se llama a la función de connect para que este componente conozca el resto de la arquitectura de redux.
 // Sin esto, este componente es sólo un componente tonto de React.
-//Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
+// Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
 // para que Redux se dé a conocer a este componente.
 export default connect(mapStateToProps, { increment, decrement })(Counter);
